@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header  {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.tournament-info {
+    margin: 10px;
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.player-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(25% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.player-card.gold {
+    border: 3px solid gold; /* Gold border for  player */
+}
+.player-card.silver {
+    border: 3px solid silver; /* Silver border for player */
+}
+.player-card.brown {
+    border: 3px solid brown; /* Bronze border for player */
+}
+.player-card.blue {
+    border: 3px solid blue; /* Blue border for player */
+}
+
+.player-card.disqualified {
+    border: 3px solid red; /* Red border for disqualified player */
+}
+
+
+.player-card img {
+    width: 100%; /* Podesite na željenu širinu */
+    max-width: 150px; /* Dodajte maksimalnu širinu slike */
+    height: auto; /* Održava proporcije */
+    border-radius: 10px;
+}
+
+.player-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.player-card p {
+    margin: 5px 0;
+}
+
+#score-update {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#score-update select, #score-update button {
+    margin-top: 10px;
+}
+
+.leaderboard {
+    margin: 20px;
+}
+
+#leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#leaderboard-table th, #leaderboard-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#leaderboard-table th {
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
