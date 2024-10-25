@@ -93,6 +93,12 @@ header  {
 
 #leaderboard-table th {
     background-color: #f4f4f4;
+
+    /* Stil za zeleni okvir i boldovani tekst */
+.playoff {
+    border: 2px solid green;
+    font-weight: bold;
+}
 }
 footer {
     background-color: #333;
