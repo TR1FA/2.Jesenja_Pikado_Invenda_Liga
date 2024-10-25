@@ -31,8 +31,19 @@ header  {
 
 .group {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-direction: column;
+    gap: 20px; /* Razmak između redova */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Razmak između kartica u istom redu */
+}
+
+.player-card {
+    width: 200px; /* Postavite širinu za konzistentan izgled */
+    text-align: center;
 }
 
 .player-card {
