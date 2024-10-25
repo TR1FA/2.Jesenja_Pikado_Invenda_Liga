@@ -55,8 +55,10 @@ header  {
     border: 3px solid blue; /* Blue border for player */
 }
 
-.player-card.disqualified {
-    border: 3px solid red; /* Red border for disqualified player */
+.disqualified {
+    border: 3px solid red; /* Crveni okvir za diskvalifikovane igrače */
+    padding: 10px; /* Dodatni prostor unutar okvira */
+    box-sizing: border-box; /* Da se okvir uklopi u dimenzije kartice */
 }
 
 
