@@ -1,3 +1,4 @@
+/* Globalni stil */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,79 +6,72 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Stil za zaglavlje */
 header {
     display: flex;
-    justify-content: center; /* Centriranje loga unutar zaglavlja (opciono). */
+    justify-content: center;
     align-items: center;
-    padding: 10px 0; /* Opciono dodaje margine zaglavlju. */
-    background-color: #f8f8f8; /* Boja pozadine zaglavlja (opciono). */
-}
-
-.logo {
-    width: 100px; /* Postavlja širinu slike loga na 100px. */
-    height: auto; /* Automatski prilagođava visinu prema širini. */
-}
-
-header  {
+    padding: 10px 0;
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em 0;
 }
 
-.tournament-info {
-    margin: 10px;
+/* Stil za logotip */
+.logo {
+    width: 100px;
+    height: auto;
 }
 
-.group {
+/* Grupa sa prikazom u 2x2 formatu */
+.group.A, .group.B {
     display: flex;
-    flex-direction: column;
-    gap: 20px; /* Razmak između redova */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
 
+/* Pojedinačne kartice igrača */
 .player-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
-    width: calc(25% - 20px);
+    width: calc(50% - 20px); /* Polovina širine za 2x2 format */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.player-card.gold {
-    border: 3px solid gold; /* Gold border for  player */
-}
-.player-card.silver {
-    border: 3px solid silver; /* Silver border for player */
-}
-.player-card.brown {
-    border: 3px solid brown; /* Bronze border for player */
-}
-.player-card.blue {
-    border: 3px solid blue; /* Blue border for player */
+
+/* Specifične klase za boje okvira */
+.player-card.gold { border: 3px solid gold; }
+.player-card.silver { border: 3px solid silver; }
+.player-card.brown { border: 3px solid brown; }
+.player-card.blue { border: 3px solid blue; }
+
+/* Crveni okvir za diskvalifikovane igrače */
+.player-card.disqualified, .group.Odsutni .player-card {
+    border: 3px solid red;
+    color: red;
+    font-weight: bold;
 }
 
-.disqualified {
-    border: 3px solid red; /* Crveni okvir za diskvalifikovane igrače */
-    padding: 10px; /* Dodatni prostor unutar okvira */
-    box-sizing: border-box; /* Da se okvir uklopi u dimenzije kartice */
-}
-
-
+/* Stil slike unutar kartice */
 .player-card img {
-    width: 100%; /* Podesite na željenu širinu */
-    max-width: 150px; /* Dodajte maksimalnu širinu slike */
-    height: auto; /* Održava proporcije */
+    width: 100%;
+    max-width: 150px;
+    height: auto;
     border-radius: 10px;
 }
 
+/* Stil za naslov i paragraf u kartici */
 .player-card h3 {
     margin: 10px 0;
     font-size: 1.2em;
 }
-
 .player-card p {
     margin: 5px 0;
 }
 
+/* Sekcija za ažuriranje bodova */
 #score-update {
     margin: 20px;
     background-color: #fff;
@@ -85,49 +79,41 @@ header  {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 #score-update select, #score-update button {
     margin-top: 10px;
 }
 
+/* Tabela lidera */
 .leaderboard {
     margin: 20px;
 }
-
 #leaderboard-table {
     width: 100%;
     border-collapse: collapse;
 }
-
 #leaderboard-table th, #leaderboard-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
-
 #leaderboard-table th {
     background-color: #f4f4f4;
-
-    /* Stil za zeleni okvir i boldovani tekst */
-.playoff {
-    border: 2px solid green;
-    font-weight: bold;
 }
-  /* Stil za zeleni okvir i boldovani tekst */
-.disq {
+
+/* Crveni okvir za redove u tabeli za diskvalifikovane igrače */
+#leaderboard-table .disq {
     border: 2px solid red;
+    color: red;
     font-weight: bold;
 }
 
-}
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 0; /* Uklanja padding, koristi samo visinu. */
-    height: 30px; /* Postavlja fiksnu visinu footera na 50px. */
+    height: 30px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-
