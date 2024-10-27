@@ -25,11 +25,11 @@ header {
 
 /* Grupa sa prikazom u 2x2 formatu */
 .group.A, .group.B {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolone */
+    gap: 20px; /* Razmak između kartica */
 }
+
 
 /* Pojedinačne kartice igrača */
 .player-card {
