@@ -83,6 +83,23 @@ header {
     margin-top: 10px;
 }
 
+.tabela-link {
+    text-align: center;
+    margin: 20px 0; /* Razmak između linka i tabele */
+}
+
+.tabela-link a {
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tabela-link a:hover {
+    color: #0073e6; /* Boja linka pri prelasku mišem */
+}
+
+
 /* Tabela lidera */
 .leaderboard {
     margin: 20px;
